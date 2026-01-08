@@ -1,0 +1,6 @@
+from sentence_transformers import SentenceTransformer
+model = SentenceTransformer("all-MiniLM-L6-v2")
+embeddings1 = model.encode("what are you doing")
+embeddings2 = model.encode("enna da pandra")
+score=util.cos_sim(embeddings1, embeddings2)
+print(score)
